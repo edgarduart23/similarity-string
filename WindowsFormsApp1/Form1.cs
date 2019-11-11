@@ -26,13 +26,13 @@ namespace WindowsFormsApp1
         private void button1_Click(object sender, EventArgs e)
           
         {
-            string input = Interaction.InputBox("Prompt", "Ingrese la cantidad de intentos", "Default", -1, -1);
+            string input = Interaction.InputBox("Ingrese la cantidad de intentos", "devlights", "", -1, -1);
             int entrada = Int32.Parse(input);
             if(entrada < 1 || entrada > 10)
             {
                 do
                 {
-                    input = Interaction.InputBox("Prompt", "Debe ingresar un valor mayor a 1 y menor a 10", "Default", -1, -1);
+                    input = Interaction.InputBox("Debe ingresar un valor mayor a 1 y menor a 10", "devlights", "", -1, -1);
                     entrada = int.Parse(input); 
                 } while (entrada < 1 || entrada > 10);
                // MessageBox.Show("Ingrese un numero mayor a 0 y menor a 10");
@@ -40,12 +40,12 @@ namespace WindowsFormsApp1
 
                             for (int i = 0; i < entrada; i++)
                             {
-                                string strToProcess = Interaction.InputBox("Prompt", "Ingrese la cadena a tratar", "Default", -1, -1);
+                                string strToProcess = Interaction.InputBox("Ingrese la cadena a tratar", "devlights", "", -1, -1);
                                 if (strToProcess.Length<1)
                                     {
                                             do
                                             {
-                                                strToProcess = Interaction.InputBox("Prompt", "Ingrese la cadena a tratar", "Default", -1, -1);
+                                                strToProcess = Interaction.InputBox("Debe ingresar una cadena con longitud mayor a 1", "devlights", "Default", -1, -1);
                                             } while (strToProcess.Length < 1);
 
                                     }else 
@@ -53,7 +53,7 @@ namespace WindowsFormsApp1
                                       {
                                                 do
                                                 {
-                                                    strToProcess = Interaction.InputBox("Prompt", "Ingrese la cadena a tratar", "Default", -1, -1);
+                                                    strToProcess = Interaction.InputBox("Debe ingresar una cadena con longitud menor a 100000", "devlights", "Default", -1, -1);
                                                 } while (strToProcess.Length > 100000);
                                      }
 
@@ -69,7 +69,7 @@ namespace WindowsFormsApp1
                                     matchlen(masterarraychar, k);
 
                                 }
-                MessageBox.Show("El resultado es: " +(finalLength));
+                MessageBox.Show("El resultado es: " +finalLength);
             }
                             //Console.ReadKey();
                         }
@@ -97,7 +97,7 @@ namespace WindowsFormsApp1
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            Application.Exit();
         }
     }
 }
